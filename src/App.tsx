@@ -53,21 +53,19 @@ const App = () => {
             justifyContent: 'space-between',
             width: '20%',
           }}>
-          {data.link && (
-            <button>
-              <a href={data.link} target="_blank">
-                Посмотреть
-              </a>
-            </button>
-          )}
+          {}
 
-          {data.download && (
-            <button>
-              <a href={data.download} target="_blank">
-                Скачать
-              </a>
-            </button>
-          )}
+          <button>
+            <a href={data.link} target="_blank">
+              Посмотреть
+            </a>
+          </button>
+
+          <button>
+            <a href={data.download} target="_blank">
+              Скачать
+            </a>
+          </button>
         </div>
       )}
     </div>
