@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import Text from './components/Text';
 import CircularProgress from '@mui/material/CircularProgress';
+import user from './assets/user.svg';
 
 export interface ResponseAPI {
   download: string;
@@ -39,6 +40,7 @@ const App = () => {
   return (
     <div className="px-[5%] md:px-[5%] pt-14 sm:pt-28 w-full h-[100%] flex justify-center flex-col gap-5">
       <div className="w-[95%] lg:w-[70%] mx-auto">
+        <img src={user} style={{ width: '100%', marginBottom: '3rem' }} />
         <h1 className="font-bold text-2xl sm:text-4xl text-[#612EF7] mb-6">
           Помощник по распознаванию фото
         </h1>
@@ -65,7 +67,7 @@ const App = () => {
                   </button>
 
                   <button
-                    className="p-2 text-white bg-black rounded-lg flex-[0.4]"
+                    className="p-2 text-white bg-black rounded-lg flex-[0.4] hover:scale-105 hover:bg-gray-700 transition-all"
                     onClick={() => {
                       setValue('');
                       setData(null);
